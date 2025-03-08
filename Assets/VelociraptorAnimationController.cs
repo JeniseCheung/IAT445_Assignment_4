@@ -27,7 +27,7 @@ public class RaptorAnimationTest : MonoBehaviour
         {
             if (animator != null)
             {
-                animator.SetTrigger("IdleTrigger"); // Trigger animation
+                animator.SetTrigger("IdleTrigger");
                 Debug.Log("Idle animation triggered!");
             }
             else
@@ -40,8 +40,21 @@ public class RaptorAnimationTest : MonoBehaviour
         {
             if (animator != null)
             {
-                animator.SetTrigger("RoarTrigger"); // Trigger animation
+                animator.SetTrigger("RoarTrigger");
                 Debug.Log("Roar animation triggered!");
+            }
+            else
+            {
+                Debug.LogError("Animator is missing!");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (animator != null)
+            {
+                animator.SetTrigger("RunTrigger"); // Trigger Run animation
+                Debug.Log("Run animation triggered!");
             }
             else
             {
