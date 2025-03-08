@@ -35,5 +35,18 @@ public class RaptorAnimationTest : MonoBehaviour
                 Debug.LogError("Animator is missing!");
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (animator != null)
+            {
+                animator.SetTrigger("RoarTrigger"); // Trigger animation
+                Debug.Log("Roar animation triggered!");
+            }
+            else
+            {
+                Debug.LogError("Animator is missing!");
+            }
+        }
     }
 }
