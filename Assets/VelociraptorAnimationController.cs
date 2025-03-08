@@ -66,8 +66,21 @@ public class RaptorAnimationTest : MonoBehaviour
         {
             if (animator != null)
             {
-                animator.SetTrigger("AttackTrigger"); // Attack Run animation
+                animator.SetTrigger("AttackTrigger");
                 Debug.Log("Attack animation triggered!");
+            }
+            else
+            {
+                Debug.LogError("Animator is missing!");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (animator != null)
+            {
+                animator.SetTrigger("DeathTrigger");
+                Debug.Log("Death animation triggered!");
             }
             else
             {
